@@ -5,13 +5,13 @@ import Link from "next/link";
 
 const AllSeriesHome = () => {
   const url =
-    "https://b2xclusive.onrender.com/api/v1/track/movies?type=SERIES&page=1&limit=6";
+    "https://b2xclusive.onrender.com/api/v1/track/movies?type=SEASONAL&page=1&limit=6";
 
   const { isLoading, isError, data } = usePostData("series", url);
 
   useEffect(() => {
     console.log("Fetched Data:", data);
-  }, [data]);
+  }, [data]); 
 
   if (isError)
     return (
